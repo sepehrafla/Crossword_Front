@@ -1,0 +1,34 @@
+{
+  "title": "The Mini Crossword",
+  "date": "Monday, February 10, 2025",
+  "author": "Tracy Bennett",
+  "editor": "Joel Fagliano",
+  "size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "grid": [
+    ["C", "R", "O", "C", "I"],
+    ["A", "U", "R", "A", "S"],
+    ["C", "L", "A", "S", "H"],
+    ["T", "E", "T", "E", ""],
+    ["I", "R", "E", "", ""]
+  ],
+  "blackCells": ["4-3", "4-4", "3-4"],
+  "clues": {
+    "across": [
+      { "number": 1, "clue": "Flowers that bloom in late winter", "answer": "CROCI" },
+      { "number": 6, "clue": "Energy fields \"read\" by psychics", "answer": "AURAS" },
+      { "number": 7, "clue": "Conflict jarringly, as colors", "answer": "CLASH" },
+      { "number": 8, "clue": "Head, in French", "answer": "TETE" },
+      { "number": 9, "clue": "Wrathful feeling", "answer": "IRE" }
+    ],
+    "down": [
+      { "number": 1, "clue": "Prickly pears, e.g.", "answer": "CACTI" },
+      { "number": 2, "clue": "What'll give you an inch, but not a mile", "answer": "RULER" },
+      { "number": 3, "clue": "Make a speech", "answer": "ORATE" },
+      { "number": 4, "clue": "Detective's assignment", "answer": "CASE" },
+      { "number": 5, "clue": "\"Kinda sorta\"", "answer": "ISH" }
+    ]
+  }
+} 

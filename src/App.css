@@ -1,0 +1,306 @@
+.App {
+  text-align: center;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.subheader {
+  margin: 8px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.byline {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #f0f0f0;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.timer:hover {
+  background-color: #f0f0f0;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  user-select: none;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.puzzle-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.active-clue-display {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.crossword-grid {
+  display: inline-block;
+  border: 2px solid #000;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.cell-container {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.cell-number {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.grid-cell {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d3d6da;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: white;
+}
+
+.grid-cell.highlighted {
+  background-color: #d3e3fc;
+}
+
+.grid-cell.active {
+  background-color: #a7c8ff;
+}
+
+.black-cell {
+  background-color: #000;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cell:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #0072e3;
+}
+
+.clues-container {
+  flex: 1;
+  max-width: 400px;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.clues-section {
+  margin-bottom: 30px;
+}
+
+.clues-section h3 {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 0;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.active-clue {
+  background-color: #d3e3fc;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.clue {
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clue:hover {
+  background-color: #f0f0f0;
+}
+
+.clue-number {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grid-cell.incorrect {
+  color: #ff0000;
+  animation: shake 0.5s;
+}
+
+.grid-cell.correct {
+  color: #008000;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media (max-width: 1200px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clues-container {
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+
+  .clues-section {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cell-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .grid-cell {
+    font-size: 24px;
+  }
+
+  .clues-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .subheader {
+    font-size: 14px;
+  }
+
+  .byline {
+    font-size: 12px;
+  }
+
+  .toolbar {
+    gap: 10px;
+  }
+
+  .toolbar button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+}
