@@ -336,7 +336,7 @@ function App() {
       <div className="header">
         <h1>The Mini Crossword</h1>
         <p className="subheader">Monday, February 10, 2025</p>
-        <p className="byline">By Tracy Bennett • Edited by Joel Fagliano</p>
+        <p className="byline">By Sepehr Aflatounian</p>
       </div>
 
       <div className="toolbar">
